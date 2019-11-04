@@ -9,7 +9,7 @@ def create_socket():
 		global sock
 		host = ""
 		port = 9996
-		sock = socket.socket()
+		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 	except socket.error as msg:
 		print("Socket creation error: " + str(msg))
